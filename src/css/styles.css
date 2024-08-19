@@ -1,0 +1,242 @@
+
+:root {
+    --slide-delay: 
+}
+
+/* body {
+    background-image: url(../img/background-template.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+} */
+header, .brains_holder {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+.logo-area {
+    width: 165px;
+    padding-left: 103px;
+}
+.title-area {
+    margin-right: 98px;
+    width: 380px;
+}
+
+h1 {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.8em;
+}
+
+.language {
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 13.5px;
+    text-align: right;
+    line-height: 1em;
+}
+
+.language a {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brains_holder {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #283590;
+    height: 680px;
+    overflow: hidden;
+}
+
+.brain_holder, .brain_1 {
+    position: relative;
+    top: -3px;
+    right: 0;
+    margin-right: 65px;
+
+}
+
+
+.brain_holder {
+    opacity: 0;
+    animation-name: fade_in;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    
+}
+.brain_5 {
+    animation-delay: 0.5s;
+}
+.brain_7 {
+    animation-delay: 1s;
+}
+.brain_8 {
+    animation-delay: 1.5s;
+}
+.brain_1 {
+    animation-delay: 2s;
+}
+.brain_2 {
+    animation-delay: 2.5s;
+}
+.brain_3 {
+    animation-delay: 3s;
+}
+.brain_4 {
+    animation-delay: 3.5s;
+}
+
+.brain_holder {
+    position: absolute;
+}
+
+.brain_holder {
+    width: 670px;
+}
+
+@keyframes fade_in {
+    0% {opacity: 0;}
+    20% {opacity: 0.5;}
+    40% {opacity: 0.25;}
+    60% {opacity: 0.75}
+    80% {opacity: 0.5}
+    100% {opacity: 1;}
+}
+.headline {
+    top: 4.2px;
+    left:0;
+    position: relative;
+    text-transform: uppercase;
+
+}
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;  
+    font-size: 36px;
+    line-height: 19px;
+    display: inline;
+
+}
+@keyframes slide_in {
+    0% {left: -600px;}
+    100% {left: 0;}
+}
+
+.headline_indent {
+    background: url('../img/headline_back.png');
+}
+.headline_indent_top {
+    background: url('../img/headline_back_top.png');
+}
+
+.headline_indent, .headline_indent_top  {
+    position: relative;
+    left: -500px;
+    padding: 0 4px 0 100px;
+    background-repeat: repeat-x;
+    display: inline;
+    animation-name: slide_in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+
+}
+
+.headline-1 {
+    animation-delay: 7s;
+}
+.headline-2 {
+    animation-delay: 7.5s;
+}
+.headline-3 {
+    animation-delay: 8s;
+}
+.headline-4 {
+    animation-delay: 8.5s;
+}
+.headline-5 {
+    animation-delay: 9s;
+}
+.headline-6 {
+    animation-delay: 10.5s;
+}
+.headline-7 {
+    animation-delay: 11s;
+}
+.headline-8 {
+    animation-delay: 11.5s;
+}
+
+/* @keyframes slide_up {
+    0% {bottom:-200px;}
+    20% {bottom:0;}
+    80% {bottom:0;}
+    100% {bottom:-160px;}
+} */
+
+.info_box {
+    margin-left: 46px;
+    background-color: white;
+    padding: 30px 6px 20px 55px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    width: 325px;
+    animation-name: slide_up;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 16s;
+    transition: 1s;
+
+}
+
+.info_box:hover {
+    bottom: 0;
+}
+
+.info_box p, h3 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 1.1em;
+    color: black;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+p {
+    margin-bottom: 17px;
+    padding-bottom: 0;
+    font-weight: 300;
+
+}
+
+
+
+.blue_text {
+    color: #00AEEF;
+}
+
+
