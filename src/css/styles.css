@@ -1,28 +1,28 @@
 
 :root {
     --color-1: #283590;
-    /* --color-1: gold;  */
     --color-2: #F7DE03; 
-    /* --color-2: green;  */
     --color-3: #D92632;
-    /* --color-3: green;  */
     --color-4: #69C5EC;
-    /* --color-4: pink; */
     --color-5: #7AC143;
-    /* --color-5: red; */
     --color-6: #FDB733;
     --color-7: #00B098;
-    /* --color-7: red; */
     --color-8: #FFD600;
-    /* --color-8: gray; */
     --color-9: #BEC12D;
-    /* --color-9: red; */
     --color-10: #485DAA;
-    /* --color-10: gray; */
     --color-11: #F57E27;
-    /* --color-11: blue; */
     --color-12: #00AEEF;
     --color-13: #F5F4F0;
+    /* --color-1: gold;  */
+    /* --color-2: green;  */
+    /* --color-3: green;  */
+    /* --color-4: pink; */
+    /* --color-5: red; */
+    /* --color-7: red; */
+    /* --color-8: gray; */
+    /* --color-9: red; */
+    /* --color-10: gray; */
+    /* --color-11: blue; */
 
     /* --test-opacity: 0.5; */
     --headline-delay: 0s;
@@ -273,8 +273,8 @@ p, li {
 .headline h2 span, .headline-2 h2 span {
     position: relative;
     display: block;
-    height:26px;
-    overflow: hidden;
+    height:25px;
+    overflow: visible;
     margin: 0;
     width: fit-content;
 
@@ -290,7 +290,7 @@ p, li {
 }
 
 .headline-2 h2 span {
-    border: 0;
+    padding: 0;
 }
 
 .headline-1 {
