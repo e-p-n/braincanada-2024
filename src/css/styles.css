@@ -26,7 +26,7 @@
 
     /* --test-opacity: 0.5; */
     --headline-delay: 0s;
-    --second-headline-delay: 4.5s;
+    --second-headline-delay: 4s;
     --graph-unit: 27px;
 
     --sans: "Roboto", Arial, Helvetica, sans-serif;
@@ -316,6 +316,7 @@ p, li {
 }
 .headline-8 {
     animation-delay: calc(var(--headline-delay) + var(--second-headline-delay) + 0.2s);
+    border-bottom: solid 1px white;
 }
 
 
