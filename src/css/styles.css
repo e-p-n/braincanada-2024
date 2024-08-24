@@ -517,49 +517,53 @@ p {
     top: 72px;
     left: 382px;
     width: 230px;
+    height: 91px;
     padding-top: 83px;
-    padding-bottom: 58px;    
+    /* padding-bottom: 58px;     */
 }
 
 .endless-impacts .ei-content .impact-2438 {
     background-color: var(--color-5);
     top: 283px;
     left: 100px;
-    width: 243px;
-    padding: 20px 20px 63px;
+    width: 242px;
+    height: 171px;
+    padding: 20px 20px 0;
 }
 .endless-impacts .ei-content .impact-383 {
     background-color: var(--color-6);
     top: 261px;
     left: 382px;
     width: 230px;
+    height: 112px;
     padding-top: 18px;
-    padding-bottom: 38px;
+    /* padding-bottom: 38px; */
 }
-
 .endless-impacts .ei-content .impact-382 {
     background-color: var(--color-4);
     top: 213px;
     right: 100px;
     width: 231px;
+    height: 101px;
     padding-top: 26px;
-    padding-bottom: 27px;
     padding-left: 36px;
 }
-.endless-impacts .ei-content .impact-187 {
+.endless-impacts .ei-content .impact-183 {
     background-color: var(--color-7);
     top: 354px;
     right: 100px;
     width: 158px;
+    height: 94px;
     padding-top: 11px;
-    padding-bottom: 41px;
+    /* padding-bottom: 41px; */
 }
 .endless-impacts .ei-content .impact-16 {
     background-color: var(--color-8);
     top: 474px;
     left: 170px;
     width: 258px;
-    padding: 11px 78px 42px 19px;
+    height: 130px;
+    padding: 11px 78px 0 19px;
 
 
 }
@@ -568,15 +572,17 @@ p {
     top: 474px;
     left: 525px;
     width: 154px;
-    padding: 12px 12px 61px 22px;
+    height: 129px;
+    padding: 12px 12px 0 22px;
     color: white;
 }
-.endless-impacts .ei-content .impact-53 {
+.endless-impacts .ei-content .impact-54 {
     background-color: var(--color-2);
     top: 474px;
     left: 736px;
     width: 95px;
-    padding: 14px 12px 82px 11px;
+    height: 150px;
+    padding: 14px 12px 0 11px;
 }
 
 .endless-impacts .ei-content .impact-66602 {
@@ -584,7 +590,8 @@ p {
     top: 638px;
     left: 170px;
     width: 155px;
-    padding: 14px 20px 20px 17px;
+    height: 128px;
+    padding: 14px 20px 0 17px;
 }
 
 .endless-impacts .ei-content .impact-86 {
@@ -592,14 +599,16 @@ p {
     top: 615px;
     left: 382px;
     width: 230px;
-    padding: 14px 12px 43px 19px;
+    height: 151px;
+    padding: 14px 12px 0 19px;
 }
 .endless-impacts .ei-content .impact-10 {
     background-color: var(--color-3);
     top: 638px;
     left: 666px;
     width: 185px;
-    padding: 14px 59px 37px 16px;
+    height: 104px;
+    padding: 14px 59px 0 16px;
     color: white;
 }
 
@@ -608,7 +617,8 @@ p {
     top: 780px;
     left: 100px;
     width: 245px;
-    padding: 16px 59px 13px 27px;
+    height: 101px;
+    padding: 16px 59px 0 27px;
     color: white;
 }
 .endless-impacts .ei-content .impact-110 {
@@ -624,7 +634,8 @@ p {
     top: 756px;
     left: 642px;
     width: 95px;
-    padding: 14px 59px 16px 38px;
+    height: 86px;
+    padding: 14px 59px 0 38px;
     color: white;
 }
 
@@ -680,7 +691,7 @@ p {
 
 }
 
-.endless-impacts .ei-content .ei-box187 {
+.endless-impacts .ei-content .ei-box183 {
     background-color: var(--color-12);
     position: absolute;
     top: 354px;
