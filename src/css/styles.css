@@ -25,7 +25,7 @@
     --color-13: #F5F4F0;
 
     /* --test-opacity: 0.5; */
-    --headline-delay: 2s;
+    --headline-delay: 0s;
     --second-headline-delay: 4.5s;
     --graph-unit: 27px;
 
@@ -129,7 +129,7 @@ h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 800;  
     font-size: 36px;
-    line-height: 0.6em;
+    line-height: 0.78em;
     display: inline;
     text-transform: uppercase;
 
@@ -144,10 +144,6 @@ a:hover {
     text-decoration: none;
 }
 
-.headline h2 {
-    line-height: 0.78em;
-
-}
 
 header, .brains_holder, .endless-impacts, .perpetual-pride, .above-beyond, .ab-articles {
     width: 1024px;
@@ -267,27 +263,34 @@ p, li {
     100% {left: 0;}
 }
 
-.headline {
+.headline, .headline-2 {
     top: 0;
     left:0;
     position: relative;
     text-transform: uppercase;
 }
 
-.headline h2 span {
+.headline h2 span, .headline-2 h2 span {
     position: relative;
     display: block;
+    height:26px;
+    overflow: hidden;
+    margin: 0;
+    width: fit-content;
+
+}
+
+.headline h2 span {
     left: -500px;
     padding: 0 4px 0 100px;
     animation-name: slide_in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     background-color: white;
-    height:26px;
-    overflow: hidden;
-    margin: 0;
-    width: fit-content;
+}
 
+.headline-2 h2 span {
+    border: 0;
 }
 
 .headline-1 {
