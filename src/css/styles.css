@@ -26,7 +26,7 @@
     /* --color-11: blue; */
 
     /* --test-opacity: 0.5; */
-    --graph-move: 1s;
+    --graph-move: 0.5s;
     --headline-delay: 0.5s;
     --second-headline-delay: 4s;
     --graph-unit: 27px;
@@ -748,6 +748,7 @@ p {
 
 .pp-column-extended {
     height: auto !important;
+    align-self: flex-start; 
 }
 
 
@@ -758,22 +759,27 @@ p {
     height: 265px !important;
     overflow: hidden;
 }
-
+.pp-hidden-ceo {
+    height: 165px !important;
+    overflow: hidden;
+}
 .pp-show {
-    height: fit-content !important;
+    height: min-content !important;
     position: relative;
     overflow: visible;
 
 }
-.pp-hidden .callout {
+.pp-hidden .callout, .pp-hidden-ceo .callout {
     color: black !important;
     border-bottom: none !important;
     margin: 0 0 15px 0 !important;
     padding: 0 !important;
 }
-
 .pp-margin {
     margin-bottom: 120px;
+}
+.pp-padding {
+    padding-bottom: 293px !important;
 }
 
 .pp-end {
@@ -786,6 +792,19 @@ p {
     width: 190px !important;
     right: -18px;
 }
+
+:root {
+    --pic-padding: 139px;
+}
+
+.ceo-pic {
+    position: static;
+    bottom: calc(-230px - var(--pic-padding));
+    width: 190px !important;
+    right: -18px;
+    border-bottom: white solid var(--pic-padding);
+}
+
 .pp-pic-pos {
     position: absolute;
 }
@@ -1110,13 +1129,14 @@ h5 {
     100% {right: 0;}
 }
 
-.row, .row-2 {
+.row {
     position: absolute;
     height: var(--graph-unit);
-    animation-duration: 1s;
+    animation-play-state: paused;
+    animation-duration: var(--graph-move);
     animation-fill-mode: forwards;
 }
-.row {
+.row-1 {
     left: calc(var(--graph-unit) * -10);
     animation-name: graph_slide_in;
  }
@@ -1124,21 +1144,25 @@ h5 {
     right: calc(var(--graph-unit) * -10);
     animation-name: graph_slide_in-2;
  }
+ .start-animation {
+    animation-play-state: initial !important;
+ }
 
 .fig-1 {
     top: 0;
+    animation-delay: calc(var(--graph-move) * 2);
 }
 .fig-2 {
     top: calc(var(--graph-unit));
-    animation-delay: var(--graph-move);
+    animation-delay: calc(var(--graph-move) * 2.5);
 }
 .fig-3 {
     top: calc(var(--graph-unit) * 2);
-    animation-delay: calc(var(--graph-move) * 2);
+    animation-delay: calc(var(--graph-move) * 3);
 }
 .fig-4 {
     top: calc(var(--graph-unit) * 3);
-    animation-delay: calc(var(--graph-move) * 3);
+    animation-delay: calc(var(--graph-move) * 3.5);
 }
 .fig-5 {
     top: calc(var(--graph-unit) * 4);
@@ -1146,81 +1170,81 @@ h5 {
 }
 .fig-6 {
     top: calc(var(--graph-unit) * 5);
-    animation-delay: calc(var(--graph-move) * 5);
+    animation-delay: calc(var(--graph-move) * 4.5);
 }
 .fig-7 {
     top: calc(var(--graph-unit) * 6);
-    animation-delay: calc(var(--graph-move) * 6);
+    animation-delay: calc(var(--graph-move) * 5);
 }
 .fig-8 {
     top: calc(var(--graph-unit) * 7);
-    animation-delay: calc(var(--graph-move) * 7);
+    animation-delay: calc(var(--graph-move) * 6.5);
 }
 .fig-9 {
     top: calc(var(--graph-unit) * 8);
-    animation-delay: calc(var(--graph-move) * 8);
+    animation-delay: calc(var(--graph-move) * 7);
 }
 .fig-9a {
     top: calc(var(--graph-unit) * 8);
-    animation-delay: calc(var(--graph-move) * 9);
+    animation-delay: calc(var(--graph-move) * 7.5);
 }
 .fig-10 {
     top: calc(var(--graph-unit) * 9);
-    animation-delay: calc(var(--graph-move) * 8.6);
+    animation-delay: calc(var(--graph-move) * 7.7);
 }
 
 .fig-10a {
     top: calc(var(--graph-unit) * 9);
-    animation-delay: calc(var(--graph-move) * 9.7);
+    animation-delay: calc(var(--graph-move) * 8.2);
 }
 
 .fig-13 {
     top: 0;
-    animation-delay: calc(var(--graph-move) * 11);
+    animation-delay: calc(var(--graph-move) * 9.5);
 }
 .fig-14 {
     top: calc(var(--graph-unit));
-    animation-delay: calc(var(--graph-move) * 12);
+    animation-delay: calc(var(--graph-move) * 10);
 }
 .fig-15 {
     top: calc(var(--graph-unit) * 2);
-    animation-delay: calc(var(--graph-move) * 13);
+    animation-delay: calc(var(--graph-move) * 10.5);
 }
 .fig-16 {
     top: calc(var(--graph-unit) * 3);
-    animation-delay: calc(var(--graph-move) * 14);
+    animation-delay: calc(var(--graph-move) * 11);
 }
 .fig-17 {
     top: calc(var(--graph-unit) * 4);
-    animation-delay: calc(var(--graph-move) * 15);
+    animation-delay: calc(var(--graph-move) * 11.5);
 }
 .fig-18 {
     top: calc(var(--graph-unit) * 5);
-    animation-delay: calc(var(--graph-move) * 16);
+    animation-delay: calc(var(--graph-move) * 12);
 }
 .fig-19 {
     top: calc(var(--graph-unit) * 6);
-    animation-delay: calc(var(--graph-move) * 16.2);
+    animation-delay: calc(var(--graph-move) * 12.2);
 }
 .fig-19a {
     top: calc(var(--graph-unit) * 6);
-    animation-delay: calc(var(--graph-move) * 17);
+    animation-delay: calc(var(--graph-move) * 13);
 }
 .fig-20 {
     top: calc(var(--graph-unit) * 7);
-    animation-delay: calc(var(--graph-move) * 18);
+    animation-delay: calc(var(--graph-move) * 13.5);
 }
 .fig-21 {
     top: calc(var(--graph-unit) * 8);
-    animation-delay: calc(var(--graph-move) * 19);
+    animation-delay: calc(var(--graph-move) * 14);
 }
 .fig-21a {
     top: calc(var(--graph-unit) * 8);
-    animation-delay: calc(var(--graph-move) * 19.4);
+    animation-delay: calc(var(--graph-move) * 14.2);
 }
 .fig-22 {
     top: calc(var(--graph-unit) * 9);
-    animation-delay: calc(var(--graph-move) * 20);
+    animation-delay: calc(var(--graph-move) * 14.7);
 }
 
 
@@ -1296,25 +1320,29 @@ h5 {
     animation-name: graph_fade_in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
 
+.left-legend .color-5 {
+    animation-delay: calc(var(--graph-move) * 2);
+}
 .left-legend .color-7 {
-    animation-delay: calc(var(--graph-move) * 9.2);
+    animation-delay: calc(var(--graph-move) * 7.5);
 }
 .left-legend .color-2 {
-    animation-delay: calc(var(--graph-move) * 9.9);
+    animation-delay: calc(var(--graph-move) * 8.2);
 }
 .right-legend .color-6 {
-    animation-delay: calc(var(--graph-move) * 11.2);
+    animation-delay: calc(var(--graph-move) * 9.5);
 }
 .right-legend .color-1 {
-    animation-delay: calc(var(--graph-move) * 17.4);
+    animation-delay: calc(var(--graph-move) * 13);
 }
 .right-legend .color-4 {
-    animation-delay: calc(var(--graph-move) * 19.6);
+    animation-delay: calc(var(--graph-move) * 14.2);
 }
 .right-legend .color-13 {
-    animation-delay: calc(var(--graph-move) * 21);
+    animation-delay: calc(var(--graph-move) * 16);
 }
 
 
