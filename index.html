@@ -283,24 +283,37 @@
                 </div>
                 <h3>Our Leaders Voice Everlasting Appreciation</h3>
                 <div class="pp-column-holder">
-                    <div class="pp-column pp-chair">
+                    <div class="pp-column pp-chair" id="chair-box">
                         <div class="pp-column-header">
                             <div class="pp-title">
-                                <h4>Brain Canada Chair</h4>
+                               <a></a><h4>Brain Canada Chair</h4>
                             </div>
                             <div class="pp-square"></div>
                         </div>
                         <div class="pp-column-content">
-                            <h5>A Powerful Investment in Momentum</h5>
-                            <p>
-                                I am delighted to present this year’s annual report, celebrating the transformative impact of the Government of Canada’s investment in brain research through the Canada Brain Research Fund (CBRF). At Brain Canada, we remain steadfast in our commitment to advancing neuroscience and neurotechnology, aiming to unravel the complexities of the human brain as well as improve lives across the country—and around the world.
-                            </p>
+                            <div class="pp-hidden" id="chair">
+                                <h5>A Powerful Investment in Momentum</h5>
+                                <p class="pp-intro">
+                                    I am delighted to present this year’s annual report, celebrating the transformative impact of the Government of Canada’s investment in brain research through the Canada Brain Research Fund (CBRF). At Brain Canada, we remain steadfast in our commitment to advancing neuroscience and neurotechnology, aiming to unravel the complexities of the human brain as well as improve lives across the country—and around the world.
+                                </p>
+                                <p class="callout">“Our investments are driving discoveries that will reshape health care and enhance quality of life for all.”</p>
+                                <p>This year, we invested $39.2 million in research, supported 187 researchers, and launched 25 competitions. The scale of our engagement is truly remarkable: be sure to review our Endless Impacts section on pages 4-5 for the full assessment of our achievements.</p>
+                                <p>This year marks a pivotal moment as we reflect on the profound outcomes made possible by your unwavering support. With the new envelope of $80 million awarded by the Government of Canada in Budget 2024, which we will match for a total investment of $160 million in research, Brain Canada will continue to catalyze groundbreaking research initiatives and foster collaboration among top researchers, clinicians, and institutions. From understanding neurological disorders to developing innovative treatments, our investments are driving discoveries that will reshape health care and enhance quality of life for all.</p>
+                                <p>The value of our collective efforts cannot be overstated. By prioritizing brain research, we are not only unlocking new insights into brain function and dysfunction—we are empowering communities with knowledge and hope. Through our signature programs and strategic funding, we have enabled pioneering projects that push the boundaries of scientific inquiry and translate findings into tangible solutions.</p>
+                                <p>Together, we are laying the pathway for a future where brain health is prioritized and supported across all sectors of society.</p>
+                                <p>Together, we are laying the pathway for a future where brain health is prioritized and supported across all sectors of society.</p>
+                                <p class="pp-end">Warm regards, <br>
+                                <span class="reg">Naomi Azrieli,</span> <span class="italic">OC, DPhil</span></p>
+                                <img src="./src/img/chair.jpg" alt="" class="chair-pic" id="chair-pic">
+                            </div>
+                           
+
                             <p> 
-                                <a href="#">more ></a>
+                                <button class="more-less" id="chair-button" onclick="showHide('chair', 'en')">more ></span></button>
                             </p>
                         </div>
                     </div>
-                    <div class="pp-column pp-ceo">
+                    <div class="pp-column pp-ceo"  id="chair-box">
                         <div class="pp-column-header">
                             <div class="pp-title">
                                 <h4>Brain Canada President & CEO</h4>
@@ -308,14 +321,17 @@
                             <div class="pp-square"></div>
                         </div>
                         <div class="pp-column-content">
-                            <h5>Connecting The Dots, Connecting Each Other</h5>
-                            <p>
-                                As President and CEO of Brain Canada, I know that our impact on the brain health of people in Canada is due in large part to the strength of our partnerships. By working together, we can overcome challenges, foster innovation, and provide exceptional value to Canadians.
-                            </p>
-                            <p> 
-                                <a href="#">more ></a>
-                            </p>
+                            <div class="pp-hidden" id="ceo">
 
+                                <h5>Connecting The Dots, Connecting Each Other</h5>
+                                <p class="pp-intro">
+                                    As President and CEO of Brain Canada, I know that our impact on the brain health of people in Canada is due in large part to the strength of our partnerships. By working together, we can overcome challenges, foster innovation, and provide exceptional value to Canadians.
+                                </p>
+                            </div>
+
+                                <p> 
+                                    <button class="more-less" id="chair-button" onclick="showHide('chair', 'en')">more ></span></button>
+                                </p>
                         </div>
                     </div>    
                 </div>
@@ -614,5 +630,7 @@
 
         </footer>
     </div>
+    <script src="./src/js/scripts.js" defer></script>
+
 </body>
 </html>

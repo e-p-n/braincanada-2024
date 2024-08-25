@@ -123,7 +123,7 @@ h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 800;  
     font-size: 36px;
-    line-height: 29px;
+    line-height: 28px;
     display: inline;
     text-transform: uppercase;
 
@@ -150,6 +150,14 @@ header {
     justify-content: space-between;
     margin-top: 28px;
 }
+
+.reg {
+    font-weight: 400;
+}
+.italic {
+    font-style: italic;
+}
+
 .logo-area {
     width: 165px;
     padding-left: 103px;
@@ -266,7 +274,6 @@ p, li {
 
 .hl-animated {
     position: absolute;
-
 }
 
 .headline h2 span {
@@ -720,6 +727,8 @@ p {
 
 }
 
+
+
 .pp-content {
     outline: #00B098 2px soild;
 }
@@ -728,15 +737,60 @@ p {
     display: flex;
     justify-content: space-between;
 }
-.pp-content .pp-column-holder .pp-column {
+.pp-content .pp-column-holder .pp-column, .pp-column-extended {
     width: 400px;
-    height: 426px;
     margin-top: 42px;
 }
+
+.pp-column {
+    height: 400px;
+}
+
+.pp-column-extended {
+    height: auto !important;
+}
+
 
 .pp-chair {
     background-color: var(--color-2);
 }
+.pp-hidden {
+    height: 265px !important;
+    overflow: hidden;
+}
+
+.pp-show {
+    height: fit-content !important;
+    position: relative;
+    overflow: visible;
+
+}
+.pp-hidden .callout {
+    color: black !important;
+    border-bottom: none !important;
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+}
+
+.pp-margin {
+    margin-bottom: 120px;
+}
+
+.pp-end {
+    margin-top: 90px !important;
+}
+
+.chair-pic {
+    position: static;
+    bottom:-150px;
+    width: 190px !important;
+    right: -18px;
+}
+.pp-pic-pos {
+    position: absolute;
+}
+
+
 
 .pp-ceo {
     background-color: var(--color-6);
@@ -770,12 +824,15 @@ h5 {
     font-size: 1.1em;
     line-height: .2em;
     padding-bottom: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .pp-title {
     margin-left: 20px;
 }
+
+
+
 .pp-column-header {
     width: 100%;
     display: flex;
@@ -784,23 +841,32 @@ h5 {
 .pp-column-content {
     margin: 0 18px 0 20px
 }
+
+.pp-intro {
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
 .pp-column-content p {
     font-family: var(--sans);
-    font-weight: 400;
-    font-size: 1.1em;
+    font-weight: 300;
     line-height: 1.2em;
     margin-top: 0;
     padding-top: 0;
 }
 
-.pp-column-content a {
+.pp-column-content button {
     font-family: "Roboto Slab", 'Times New Roman', Times, serif;
     text-decoration: none;
     color: black;
-    font-size: .85em;
+    font-size: .95em;
     display: block;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
+    padding: 0;
     width: fit-content;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /****** ABOVE AND BEYOND *******/
@@ -921,9 +987,9 @@ h5 {
 
 .callout {
     color: var(--color-1);
-    font-size: 1.56em;
+    font-size: 1.56em !important;
     line-height: 1.13em;
-    font-weight: 400;
+    font-weight: 400 !important;
     margin-top: 50px !important;
     margin-bottom: 50px !important;
     padding-bottom: 5px;
