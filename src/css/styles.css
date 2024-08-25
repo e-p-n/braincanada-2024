@@ -286,7 +286,6 @@ p, li {
     animation-name: slide_in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background-color: white;
 }
 
 .hl-white {
@@ -817,6 +816,14 @@ h5 {
     padding-bottom: 0;
 }
 
+.ab-border-1 {
+    border-bottom: 350px solid white;
+}
+.ab-border-2 {
+    height: 135px; 
+    border-bottom: 118px solid white;
+
+}
 .above-beyond .ab-header {
     display: flex;
     justify-content: space-between !important;
