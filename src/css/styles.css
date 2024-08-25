@@ -299,7 +299,6 @@ p, li {
     color: white;
     overflow: hidden;
 }
-.hl-
 
 
 .headline-1 {
@@ -318,10 +317,10 @@ p, li {
     animation-delay: calc(var(--headline-delay) + 0.4s);
 }
 .headline-6 {
-    animation-delay: calc(var(--headline-delay) + var(--second-headline-delay) + 0.1s);
+    animation-delay: calc(var(--headline-delay) + var(--second-headline-delay));
 }
 .headline-7 {
-    animation-delay: calc(var(--headline-delay) + var(--second-headline-delay) + 0.2s);
+    animation-delay: calc(var(--headline-delay) + var(--second-headline-delay) + 0.1s);
 }
 .headline-8 {
     animation-delay: calc(var(--headline-delay) + var(--second-headline-delay) + 0.2s);
