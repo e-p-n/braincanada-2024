@@ -1452,7 +1452,7 @@ footer {
 .items-holder {
     display: flex;
     flex: 0 0 auto;
-    animation: moveSlideshow 30s linear infinite;
+    animation: moveSlideshow 45s linear infinite;
     padding-bottom: 10px;
 }
 
