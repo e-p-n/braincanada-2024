@@ -1,20 +1,18 @@
-
-// // **** Show / Hide text for Execs ****
+// **** Show / Hide text for Execs ****
 
 function showHide(id, lang) {
-    var more = "more >";
-    var less = "less >";
+    let more = "more >";
+    let less = "less >";
     if (lang === "fr") {
         more = "Plus";
         less = "Moins";
     }
-    var message = document.getElementById(id);
+    let message = document.getElementById(id);
     
-
     let button = document.getElementById(id+'-button');
     let pic = document.getElementById(id+'-pic');
     let box = document.getElementById(id+'-box');
-    var boxClass, buttonClass;
+    let boxClass, buttonClass;
     if (id=="ceo") {
         boxClass = "pp-column-extended";
         buttonClass = " pp-padding"
@@ -50,16 +48,12 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       // If the element is visible
       if (entry.isIntersecting) {
-        // Add the animation class
-        // entry.target.classList.add('animation');
-
-
+        // Add the animation classes to divs with "row" class and lis with "legend-item"
         let rows = graphs.getElementsByTagName("div");
         for (let i= 0; i < rows.length; i++) {
             if(rows[i].classList.contains("row")) {
                  rows[i].classList.add("start-animation");
             }
-
         }
         let legends = graphs.getElementsByTagName("li");
         for (let i= 0; i < legends.length; i++) {
@@ -71,19 +65,4 @@ const observer = new IntersectionObserver(entries => {
     });
   });
 
-//   const observer2 = new IntersectionObserver(entries => {
-//     // Loop over the entries
-//     entries.forEach(entry => {
-//       // If the element is visible
-//       if (entry.isIntersecting) {
-//         // Add the animation class
-//         entry.target.classList.add('fadeIn');
-//       }
-//     });
-//   });
-  
   observer.observe(document.querySelector('.fi-graph'));
-//   observer.observe(document.querySelector('#graph2'));
-//   observer2.observe(document.querySelector('#stats1'));
-//   observer2.observe(document.querySelector('#stats2'));
-
