@@ -144,5 +144,5 @@ const graphObserver = new IntersectionObserver(entries => {
   });
 
   graphObserver.observe(document.querySelector('.fi-graph'));
-  ipObserver.observe(document.querySelector('#ip-white-box'));
+//   ipObserver.observe(document.querySelector('#ip-white-box'));
   eiObserver.observe(document.querySelector('#ei-info'));
