@@ -107,6 +107,13 @@
     background-color: white !important;
 }
 
+/* .test-pos {
+    width: 700px;
+    height: 4px;
+    background-color: red;
+
+} */
+
 h1 {
     font-family: var(--slab);
     font-weight: 300;
@@ -319,6 +326,15 @@ header {
     margin-right: 65px;
 }
 
+@keyframes fade_in {
+    0% {opacity: 0;}
+    20% {opacity: 0.5;}
+    40% {opacity: 0.25;}
+    60% {opacity: 0.75}
+    80% {opacity: 0.5}
+    100% {opacity: 1;}
+}
+
 .brain_holder {
     opacity: 0;
     animation-name: fade_in;
@@ -326,6 +342,7 @@ header {
     animation-fill-mode: forwards;
     
 }
+
 .brain_5 {
     animation-delay: 0.5s;
 }
@@ -367,6 +384,7 @@ header {
     position: relative;
     text-transform: uppercase;
     display: block !important;
+    z-index: 900;
 }
 
 .hl-animated {
@@ -423,33 +441,50 @@ header {
     animation-delay: calc(var(--headline-delay) + var(--second-headline-delay) + 0.2s);
 }
 
-@keyframes slide_up {
+@keyframes ib_slide_up {
     0% {bottom:-200px;}
-    20% {bottom:0;}
-    80% {bottom:0;}
-    100% {bottom:-160px;}
+    /* 20% {bottom:0;}
+    80% {bottom:0;} */
+    /* 100% {bottom:-160px;} */
+    100% {bottom:0;}
 }
 
-.info_box {
+
+.info-box {
     margin-left: 46px;
     background-color: white;
     padding: 30px 6px 20px 55px;
     position: absolute;
     left: 0;
-    bottom: -250px;
     width: 325px;
-    animation-name: slide_up;
-    animation-duration: 4s;
+    height: 150px;
+}
+
+.ib-initial-pos {
+    bottom: -200px;
+}
+
+.ib-revised-pos {
+    bottom:0px;
+}
+
+
+
+.ib-slide-up {
+    animation-name: ib_slide_up;
+    animation-duration: .75s;
     animation-fill-mode: forwards;
     animation-delay: 6s;
     transition: 1s;
+
 }
 
-.info_box:hover {
+
+.info-box:hover {
     bottom: 0;
 }
 
-.info_box p, h3 {
+.info-box p, h3 {
     font-family: var(--sans);
     font-size: 18px;
     margin-top: 0;
@@ -458,9 +493,11 @@ header {
     color: black;
 }
 
-.info_box h3 {
+.info-box h3 {
     text-transform: uppercase;
 }
+
+/**** Infinitite Pathways ****/
 
 .infinite-pathways {
     width:1024px;
@@ -470,11 +507,8 @@ header {
     position: relative;
     overflow: hidden;
     padding-bottom: 93px;
+    z-index: 1000;
 }
-
-
-
-/**** Infinitite Pathways ****/
 
 .infinite-pathways .ip-content {
     margin: 55px 305px 20px 100px;
@@ -485,24 +519,38 @@ header {
     margin-top: 51px;
 }
 
+@keyframes ip_slide_down {
+    0% {top: -140px}
+    100% {top: 0;}
+}
+@keyframes ib_slide_down {
+    0% {bottom: 0}
+    100% {bottom:-200px;}
+}
 
-.infinite-pathways .white-box {
+
+.ib-slide-down, .ip-slide-down {
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transition: 1s;
+}
+.ib-slide-down {
+    animation-name: ib_slide_down;
+}
+
+
+.ip-slide-down {
+    animation-name: ip_slide_down;
+}
+
+.infinite-pathways .ip-white-box {
     position:absolute;
     right: 0;
-    top:0;
+    top:-140px;
     background-color: white;
     width: 290px;
     height: 140px;
 
-}
-
-@keyframes fade_in {
-    0% {opacity: 0;}
-    20% {opacity: 0.5;}
-    40% {opacity: 0.25;}
-    60% {opacity: 0.75}
-    80% {opacity: 0.5}
-    100% {opacity: 1;}
 }
 
 
@@ -529,15 +577,34 @@ header {
     margin-top: 8px;
 }
 
+@keyframes ei_slide_down {
+    0% {
+        top: -148px
+    }
+    100% {
+        top: -73px
+    }
+}
+
 .endless-impacts .yellow-box {
     background-color: var(--color-2);
     width: 210px;
-    height:74px;
+    /* height: 1px; */
+    height:75px;
     position: absolute;
-    top: -72px;
+    top: -148px;
     left: 382px;
-    opacity: var(--test-opacity);
+
+
 }
+.yellow-box.animate {
+    animation-name: ei_slide_down;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transition: 1s;
+
+}
+
 
 .endless-impacts .ei-content, .perpetual-pride .pp-content {
     margin: 52px 100px;
@@ -569,46 +636,308 @@ header {
 
 }
 
+@keyframes ei_39-2_slide {
+    0% {
+        color: var(--color-3);
+        top: -260px;
+    }
+    50% {
+        color: var(--color-3);
+        top:-71px;
+    }
+    100% {
+        color: white;
+        top: 72px;
+    }
+}
+
+
+
+
 .endless-impacts .ei-content .impact-39-2 {
     background-color: var(--color-3);
-    color: white;
-    top: 72px;
+    color: var(--color-3);
     left: 382px;
     width: 230px;
     height: 91px;
-    padding-top: 83px;
-    /* padding-bottom: 58px;     */
+    top: -260px;
+    padding-top: 83px;    
+
 }
 
-.endless-impacts .ei-content .impact-2438 {
-    background-color: var(--color-5);
-    top: 283px;
-    left: 100px;
-    width: 242px;
-    height: 171px;
-    padding: 20px 20px 0;
+.impact.impact-39-2.animate {
+    animation-name: ei_39-2_slide;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ei_box39-2_slide {
+    0% {
+        top: -73px;
+    }
+    50% {
+        top:-73px;
+    }
+    100% {
+        top: 72px;
+    }
+}
+.endless-impacts .ei-content .ei-box39-2 {
+    background-color: white;
+    position: absolute;
+    top: -73px;
+    left: 382px;
+    width: 210px;
+    height: 75px;
+}
+
+.ei-box39-2.animate {
+    animation-name: ei_box39-2_slide;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ei_impact-383_slide {
+    0% {
+        visibility: hidden;
+        top: 72px;
+        color: var(--color-6);
+    }
+    5% {
+        visibility: visible;
+        top: 72px;
+        color: var(--color-6);
+    }
+    100% {
+        visibility: visible;
+        top: 261px;
+        color: black;
+    }
 }
 
 .endless-impacts .ei-content .impact-383 {
     background-color: var(--color-6);
-    top: 261px;
+    color: var(--color-6);
+    /* top: 261px; */
+    top: 72px;
     left: 382px;
     width: 230px;
     height: 112px;
     padding-top: 18px;
+    visibility: hidden;
+}
+.impact.impact-383.animate {
+    animation-name: ei_impact-383_slide;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ei_box383_slide {
+    0% {
+        visibility: hidden;
+        top: 237px;
+    }
+    5% {
+        visibility: visible;
+        top: 237px;
+    }
+    100% {
+        visibility: visible;
+        top: 261px;
+    }
+}
+
+
+.endless-impacts .ei-content .ei-box383 {
+    background-color: var(--color-3);
+    position: absolute;
+    top: 237px;
+    left: 594px;
+    width: 48px;
+    height: 24px;
+    visibility: hidden;
+
+}
+.ei-box383.animate {
+    animation-name: ei_box383_slide;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes ei_impact-382_slide {
+    0% {
+        visibility: hidden;
+        right: 382px;
+        color: var(--color-4);
+        width: 209px;
+
+    }
+    5% {
+        visibility: visible;
+        right: 382px;
+        color: var(--color-4);
+        width: 209px;
+
+    }
+    65% {
+        visibility: visible;
+        color: var(--color-4);
+        width: 231px;
+    }
+    100% {
+        visibility: visible;
+        right: 100px;
+        color: black;
+        width: 231px;
+    }
 }
 
 .endless-impacts .ei-content .impact-382 {
     background-color: var(--color-4);
+    visibility: hidden;
     top: 213px;
-    right: 100px;
-    width: 231px;
+    right: 382px;
+    width: 209px;
     height: 101px;
     padding-top: 26px;
     padding-left: 36px;
+
+
+}
+.impact.impact-382.animate {
+    animation-name: ei_impact-382_slide;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 
+@keyframes ei_impact-2438_slide {
+    0% {
+        color: var(--color-5);
+        visibility: hidden;
+        top: 283px;
+        left: 347px;
+        width: 5px;
+        height: 32px;
+    }
+    5% {
+        color: var(--color-5);
+        visibility: visible;
+        top: 283px;
+        left: 347px;
+        width: 5px;
+        height: 32px;
+    }
+    30% {
+        color: var(--color-5);
+
+    }
+    100% {
+        color: black;
+        visibility: visible;
+        top: 283px; 
+        left: 100px;
+        width: 242px;
+        height:171px
+    }
+}
+
+
+
+.endless-impacts .ei-content .impact-2438 {
+    background-color: var(--color-5);
+    color: var(--color-5);
+    visibility: hidden;
+    top: 283px;
+    left: 347px;
+    width: 5px;
+    height: 52px;
+    padding: 20px 20px 0;
+    overflow: hidden;
+    
+}
+.impact.impact-2438.animate {
+    animation-name: ei_impact-2438_slide;
+    animation-duration: 2s;
+    animation-delay: 5.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ei_box2438_slide {
+    0% {
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+    }
+    5% {
+        visibility: visible;
+        width: 1px;
+        height: 1px;
+    }
+    100% {
+        visibility: visible;
+        width: 35px;
+        height: 72px;   }
+}
+
+
+
+.endless-impacts .ei-content .ei-box2438 {
+    background-color: var(--color-11);
+    position: absolute;
+    top: 283px;
+    right: 642px;
+    /* width: 35px;
+    height: 72px; */
+    width: 1px;
+    height: 1px;
+
+}
+
+.ei-box2438.animate {
+    animation-name: ei_box2438_slide;
+    animation-duration: 0.5s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ei_box2438a_slide {
+    0% {
+        opacity: 0;
+        height: 1px;
+    }
+   
+    100% {
+        opacity: 0.5;
+        height: 24px;   }
+}
+
+.endless-impacts .ei-content .ei-box2438-a {
+    background-color: var(--color-8);
+    position: absolute;
+    top: 450px;
+    left: 170px;
+    width: 189px;
+    /* height: 24px; */
+    height: 1px;
+    opacity: 0;
+}
+.ei-box2438-a.animate {
+    animation-name: ei_box2438a_slide;
+    animation-duration: 0.3s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+
 .endless-impacts .ei-content .impact-183 {
+    visibility: hidden;
     background-color: var(--color-7);
     top: 354px;
     right: 100px;
@@ -619,6 +948,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-16 {
+    visibility: hidden;
     background-color: var(--color-8);
     top: 474px;
     left: 170px;
@@ -628,6 +958,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-25 {
+    visibility: hidden;
     background-color: var(--color-1);
     top: 474px;
     left: 525px;
@@ -638,6 +969,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-54 {
+    visibility: hidden;
     background-color: var(--color-2);
     top: 474px;
     left: 736px;
@@ -647,6 +979,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-66602 {
+    visibility: hidden;
     background-color: var(--color-9);
     top: 638px;
     left: 170px;
@@ -656,6 +989,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-86 {
+    visibility: hidden;
     background-color: var(--color-4);
     top: 615px;
     left: 382px;
@@ -665,6 +999,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-10 {
+    visibility: hidden;
     background-color: var(--color-3);
     top: 638px;
     left: 666px;
@@ -675,6 +1010,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-34 {
+    visibility: hidden;
     background-color: var(--color-10);
     top: 780px;
     left: 100px;
@@ -685,6 +1021,7 @@ header {
 }
 
 .endless-impacts .ei-content .impact-110 {
+    visibility: hidden;
     background-color: var(--color-5);
     top: 780px;
     left: 431px;
@@ -694,55 +1031,25 @@ header {
 }
 
 .endless-impacts .ei-content .impact-22 {
+    visibility: hidden;
     background-color: var(--color-1);
     top: 756px;
-    left: 642px;
+    left: 643px;
     width: 95px;
     height: 86px;
     padding: 14px 59px 0 38px;
     color: white;
 }
 
-.endless-impacts .ei-content .ei-box39-2 {
-    background-color: white;
-    position: absolute;
-    top: 72px;
-    left: 382px;
-    width: 213px;
-    height: 72px;
 
-}
 
-.endless-impacts .ei-content .ei-box383 {
-    background-color: var(--color-3);
-    position: absolute;
-    top: 261px;
-    left: 594px;
-    width: 48px;
-    height: 24px;
 
-}
 
-.endless-impacts .ei-content .ei-box2438 {
-    background-color: var(--color-11);
-    position: absolute;
-    top: 283px;
-    left: 347px;
-    width: 35px;
-    height: 72px;
-}
 
-.endless-impacts .ei-content .ei-box2438-a {
-    background-color: var(--color-8);
-    position: absolute;
-    top: 450px;
-    left: 170px;
-    width: 189px;
-    height: 24px;
-    opacity: .5;
-}
+
 
 .endless-impacts .ei-content .ei-box382 {
+    visibility: hidden;
     background-color: white;
     position: absolute;
     top: 285px;
@@ -752,9 +1059,10 @@ header {
 }
 
 .endless-impacts .ei-content .ei-box183 {
+    visibility: hidden;
     background-color: var(--color-12);
     position: absolute;
-    top: 354px;
+    top: 355px;
     right: 100px;
     width: 45px;
     height: 46px;
@@ -762,6 +1070,7 @@ header {
 }
 
 .endless-impacts .ei-content .ei-box16 {
+    visibility: hidden;
     background-color: var(--color-10);
     position: absolute;
     top: 474px;
@@ -771,6 +1080,7 @@ header {
 }
 
 .endless-impacts .ei-content .ei-box25 {
+    visibility: hidden;
     background-color: white;
     position: absolute;
     top: 567px;
@@ -780,6 +1090,7 @@ header {
 }
 
 .endless-impacts .ei-content .ei-box66602 {
+    visibility: hidden;
     background-color: var(--color-10);
     position: absolute;
     top: 757px;
@@ -789,15 +1100,17 @@ header {
 }
 
 .endless-impacts .ei-content .ei-box86 {
+    visibility: hidden;
     background-color: var(--color-12);
     position: absolute;
     top: 735px;
-    left: 540px;
+    left: 541px;
     width: 102px;
     height: 45px;
 }
 
 .endless-impacts .ei-content .ei-box34 {
+    visibility: hidden;
     background-color: var(--color-1);
     position: absolute;
     top: 897px;
@@ -1487,6 +1800,4 @@ footer {
 .footer-left img {
     margin-top: 8px;
 }
-
-
 

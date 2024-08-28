@@ -19,6 +19,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="test-pos" id="test"></div>
         <header>
             <div class="logo-area">
                 <img src="./src/img/brain_canada_logo.svg" alt="Brain Canada Foundation" width="200">
@@ -67,7 +68,7 @@
                 </h2>
             </div>
 
-            <div class="info_box">
+            <div class="info-box ib-initial-pos ib-slide-up" id="info-box">
                 <h3>Our Vision</h3>
                 <p>Bold science for brain health</p>
                 <h3>Our Mission</h3>
@@ -76,7 +77,7 @@
     
         </div>
         <div class="infinite-pathways">
-            <div class="white-box">
+            <div class="ip-white-box" id="ip-white-box">
                 &nbsp;
             </div>
             <div class="ip-content">
@@ -170,8 +171,7 @@
             </div>
 
         </div>
-        <div class="endless-impacts">
-            <div class="yellow-box">&nbsp;</div>
+        <div class="endless-impacts" id="endless-impacts">
             <div class="ei-content">
                 <div class="headline">
                     <h2>
@@ -181,96 +181,102 @@
                 </div>
                 <h3>A Year of Resounding Milestones</h3>
                 <p class="date">April 1, 2023 – March 31, 2024</p>
-                <ul>
-                    <li class="impact impact-39-2">
-                       <span class="number">$39.2M</span>
-                        invested in research
+                <ul id="ei-info">
+                    <li id="impact-22" class="impact impact-22">
+                        <span class="number">22</span>
+                        peer review panels
                     </li>
-                    <li class="impact impact-2438">
-                        <span class="number">2,438</span>
-                        people accessing <br>
-                        Brain Canada-funded <br>
-                        clinical trials <br>
-                        <span class="footnote">(as reported in the ClinicalTrials.gov database) </li>
+                    <li id="impact-110" class="impact impact-110">
+                        <span class="number">110</span>
+                        grants awarded
                     </li>
-                     <li class="impact impact-383">
-                        <span class="number">383</span>
-                        students, trainees, <br>
-                        and highly qualified <br>
-                        personnel engaged 
-                     </li>
-                    <li class="impact impact-382">
-                        <span class="number">382</span>
-                        peer-reviewed publications <br>
-                        resulting from Brain <br>
-                        Canada funding 
+                    <li id="impact-34" class="impact impact-34">
+                        <span class="number">34</span>
+                        Indigenous and Black scholars 
+                        empowered through targeted
+                        partnered programs   
+                    </li> 
+                    <li id="impact-10" class="impact impact-10">
+                        <span class="number">10</span>
+                        new programs launched
                     </li>
-                    <li class="impact impact-183">
-                        <span class="number">183</span>
-                        researchers supported
-                    </li>
-                    <li class="impact impact-16">
-                        <span class="number">16</span>
-                        active clinical trials supported by
-                        Brain Canada and its partners <br>
-                        <span class="footnote">(as reported in the ClinicalTrials.gov database)</span>
-                    </li>
-                    <li class="impact impact-25">
-                        <span class="number">25</span>
-                        competitions launched
-                    </li>
-                    <li class="impact impact-54">
-                        <span class="number">54</span>
-                        institutions
-                        supported
-                    </li>
-                    <li class="impact impact-66602">
-                        <span class="number">66,602</span>
-                        citations* of Brain
-                        Canada-funded
-                        publications <br>
-                        <span class="footnote">*cumulative since 2011</span></li>
-                    </li>
-                    <li class="impact impact-86">
+                    <li id="impact-86" class="impact impact-86">
                         <span class="number">86</span>
                         clinicians and researchers
                         who took part in Brain
                         Canada-led peer <br>
                         review panels 
                     </li>
-                    <li class="impact impact-10">
-                        <span class="number">10</span>
-                        new programs launched
+                    <li id="impact-66602" class="impact impact-66602">
+                        <span class="number">66,602</span>
+                        citations* of Brain
+                        Canada-funded
+                        publications <br>
+                        <span class="footnote">*cumulative since 2011</span></li>
                     </li>
-                    <li class="impact impact-34">
-                        <span class="number">34</span>
-                        Indigenous and Black scholars 
-                        empowered through targeted
-                        partnered programs   
+                    <li id="impact-54" class="impact impact-54">
+                        <span class="number">54</span>
+                        institutions
+                        supported
                     </li>
-                    <li class="impact impact-110">
-                        <span class="number">110</span>
-                        grants awarded
+                    <li id="impact-25" class="impact impact-25">
+                        <span class="number">25</span>
+                        competitions launched
                     </li>
-                    <li class="impact impact-22">
-                        <span class="number">22</span>
-                        peer review panels
+                    <li id="impact-16" class="impact impact-16">
+                        <span class="number">16</span>
+                        active clinical trials supported by
+                        Brain Canada and its partners <br>
+                        <span class="footnote">(as reported in the ClinicalTrials.gov database)</span>
                     </li>
-    
+                    <li id="impact-183" class="impact impact-183">
+                        <span class="number">183</span>
+                        researchers supported
+                    </li>
+                    <li id="impact-382" class="impact impact-382">
+                        <span class="number">382</span>
+                        peer-reviewed publications <br>
+                        resulting from Brain <br>
+                        Canada funding 
+                    </li>
+                    <li id="impact-2438" class="impact impact-2438">
+                        <span class="number">2,438</span>
+                        people accessing <br>
+                        Brain Canada-funded <br>
+                        clinical trials <br>
+                        <span class="footnote">(as reported in the ClinicalTrials.gov database) </li>
+                    </li>
+                    <li id="impact-383" class="impact impact-383">
+                        <span class="number">383</span>
+                        students, trainees, <br>
+                        and highly qualified <br>
+                        personnel engaged 
+                     </li>
+                   <li id="impact-39-2" class="impact impact-39-2">
+                        <span class="number">$39.2M</span>
+                         invested in research
+                     </li>
+                     <div class="ei-box39-2"></div>
+                     <div class="ei-box383"></div>
+                     <div class="ei-box2438"></div>
+                     <div class="ei-box2438-a"></div>
+                     <!-- <div class="ei-white-box"></div> -->
+                     <div class="ei-box382"></div>
+                     <div class="ei-box183"></div>
+                     <div class="ei-box16"></div>
+                     <div class="ei-box25"></div>
+                     <div class="ei-box66602"></div>
+                     <div class="ei-box86"></div>
+                     <div class="ei-box34"></div>
+                     <div id="ei-yellow-box" class="yellow-box"></div>
+ 
                 </ul>
-                <div class="ei-box39-2"></div>
-                <div class="ei-box383"></div>
-                <div class="ei-box2438"></div>
-                <div class="ei-box2438-a"></div>
-                <div class="ei-box382"></div>
-                <div class="ei-box183"></div>
-                <div class="ei-box16"></div>
-                <div class="ei-box25"></div>
-                <div class="ei-box66602"></div>
-                <div class="ei-box86"></div>
-                <div class="ei-box34"></div>
+
+
                 
             </div>
+
+
         </div>
 
         <div class="perpetual-pride">

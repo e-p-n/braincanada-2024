@@ -1,11 +1,52 @@
+// import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+
+// // **** Scrolling animations ****
+
+
+// const ipWhiteBox = document.querySelector('.ip-white-box');
+// const ipWhiteBoxOffsetTop = ipWhiteBox.offsetTop;
+// const ipWhiteBoxOffHeight = ipWhiteBox.offsetHeight;
+// console.log(ipWhiteBoxOffHeight);
+// console.log(ipWhiteBox.offsetTop);
+// console.log
+
+
+// const test = document.getElementById("test");
+// console.log(test);
+// const position = CSS.px(ipWhiteBoxOffsetTop + ipWhiteBoxOffHeight - window.innerHeight - 300);
+// console.log(position);
+// test.style.top = position +"px";
+
+
+// const ipWhiteBoxTL = new ScrollTimeline({
+//     scrollOffsets: [
+
+//         CSS.px(200),
+//         CSS.px(0)
+
+//     ]
+// });
+
+
+
+
+// // let ipWhiteBoxHeight = ipWhiteBox.clientHeight;
+// ipWhiteBox.animate(
+//     { transform: ['translateY(0)', 'translateY(140px)']},
+//     {
+//         duration: 1,
+//         timeline: ipWhiteBoxTL
+//     }
+// )
+
 // **** Show / Hide text for Execs ****
 
 function showHide(id, lang) {
     let more = "more >";
     let less = "less >";
     if (lang === "fr") {
-        more = "Plus";
-        less = "Moins";
+        more = "Plus >";
+        less = "Moins >";
     }
     let message = document.getElementById(id);
     
@@ -36,14 +77,47 @@ function showHide(id, lang) {
         url += '#' + id + '-box';
         location.href = url;
     }
-    console.log (button.className);
 
 }
 
-// **** Load Graph animation on View ****
-const observer = new IntersectionObserver(entries => {
-    let graphs = document.getElementById("financials");
+const eiObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            let liTags = entry.target.children;
+            console.log(liTags.length);
 
+            for(let i=0; i < liTags.length; i++) {
+                liTags[i].classList.add("animate");
+                console.log(liTags[i]);
+
+            }
+  
+        }
+    })
+})
+
+const ipObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        let infoBox = document.getElementById("info-box");
+        if(entry.isIntersecting) {
+            infoBox.classList.replace("ib-slide-up", "ib-slide-down");
+            infoBox.classList.replace("ib-initial-pos", "ib-revised-pos");
+            entry.target.classList.add("ip-slide-down");
+        }
+    },
+    {
+        rootMargin: "200px"
+    })
+
+})
+
+
+// **** Load Graph animation on View ****
+const graphObserver = new IntersectionObserver(entries => {
+    
+
+    // ANIMATE GRAPHS
+    let graphs = document.getElementById("financials");
     // Loop over the entries
     entries.forEach(entry => {
       // If the element is visible
@@ -62,7 +136,13 @@ const observer = new IntersectionObserver(entries => {
             }
         }        
       }
-    });
+    },
+    {
+        rootMargin: "0 0 -200px 0"
+    }
+    );
   });
 
-  observer.observe(document.querySelector('.fi-graph'));
+  graphObserver.observe(document.querySelector('.fi-graph'));
+  ipObserver.observe(document.querySelector('#ip-white-box'));
+  eiObserver.observe(document.querySelector('#ei-info'));
