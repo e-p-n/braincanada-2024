@@ -230,9 +230,13 @@ header, .brains_holder, .endless-impacts, .perpetual-pride, .above-beyond, .ab-a
 .items-holder {
    display: flex;
    flex: 0 0 auto;
-   animation: moveSlideshow 45s linear infinite;
-   padding-bottom: 10px;
+    padding-bottom: 10px;
 }
+
+.items-holder.animate {
+    animation: moveSlideshow 45s linear infinite;
+    animation-delay: 1s;
+ }
 
 .items-holder:hover {
    animation-play-state: paused;

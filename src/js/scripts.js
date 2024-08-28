@@ -41,6 +41,8 @@
 
 // **** Show / Hide text for Execs ****
 
+
+
 function showHide(id, lang) {
     let more = "more >";
     let less = "less >";
@@ -80,15 +82,24 @@ function showHide(id, lang) {
 
 }
 
+const carObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+        
+    })
+
+}
+)
+
 const eiObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
             let liTags = entry.target.children;
-            console.log(liTags.length);
 
             for(let i=0; i < liTags.length; i++) {
                 liTags[i].classList.add("animate");
-                console.log(liTags[i]);
 
             }
   
@@ -100,8 +111,8 @@ const ipObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         let infoBox = document.getElementById("info-box");
         if(entry.isIntersecting) {
-            infoBox.classList.replace("ib-slide-up", "ib-slide-down");
-            infoBox.classList.replace("ib-initial-pos", "ib-revised-pos");
+            // infoBox.classList.replace("ib-slide-up", "ib-slide-down");
+            // infoBox.classList.replace("ib-initial-pos", "ib-revised-pos");
             entry.target.classList.add("ip-slide-down");
         }
     },
@@ -144,5 +155,10 @@ const graphObserver = new IntersectionObserver(entries => {
   });
 
   graphObserver.observe(document.querySelector('.fi-graph'));
-//   ipObserver.observe(document.querySelector('#ip-white-box'));
+  ipObserver.observe(document.querySelector('#ip-white-box'));
   eiObserver.observe(document.querySelector('#ei-info'));
+const carousels = document.querySelectorAll('.items-holder');
+carousels.forEach (carousel =>
+                   carObserver.observe(carousel)
+);
+// carObserver.observe(document.querySelector('#car-2'));
