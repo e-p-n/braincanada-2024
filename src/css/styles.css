@@ -2301,7 +2301,7 @@ header {
 .financials li {
     font-size: 2em;
     line-height: .6rem;
-    vertical-align: text-top;
+    
     /* border: 1px solid pink; */
 }
 .fi-legend-box {
@@ -2309,6 +2309,10 @@ header {
 }
 .fi-legend-box-fr {
     width: calc(var(--graph-unit)*12);
+    
+}
+.fi-legend-box-fr h4 {
+    width: calc(var(--graph-unit)*10);
 }
 .left-legend {
     margin: 0 35px !important;
@@ -2322,11 +2326,13 @@ header {
 .legend {
     color: black;
     font-size: .75rem;
+    line-height: 1.2em;
     position: relative; 
     top: -0.5em;
     left: -.8em;
-    padding-left: 0px;
+    padding-left: 27px;
     margin-left: 0px;
+    display: flex;
 }
 
 @keyframes graph_fade_in {
@@ -2366,8 +2372,10 @@ header {
 
 .legend-no  {
     display: inline-block;
-    width: 25px;
+    width: 27px;
     font-weight: 700;
+    position: absolute;
+    left: -2px;
 }
 .legend-desc {
     display: inline-block;
