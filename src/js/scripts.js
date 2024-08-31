@@ -1,47 +1,5 @@
-// import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
-
-// // **** Scrolling animations ****
-
-
-// const ipWhiteBox = document.querySelector('.ip-white-box');
-// const ipWhiteBoxOffsetTop = ipWhiteBox.offsetTop;
-// const ipWhiteBoxOffHeight = ipWhiteBox.offsetHeight;
-// console.log(ipWhiteBoxOffHeight);
-// console.log(ipWhiteBox.offsetTop);
-// console.log
-
-
-// const test = document.getElementById("test");
-// console.log(test);
-// const position = CSS.px(ipWhiteBoxOffsetTop + ipWhiteBoxOffHeight - window.innerHeight - 300);
-// console.log(position);
-// test.style.top = position +"px";
-
-
-// const ipWhiteBoxTL = new ScrollTimeline({
-//     scrollOffsets: [
-
-//         CSS.px(200),
-//         CSS.px(0)
-
-//     ]
-// });
-
-
-
-
-// // let ipWhiteBoxHeight = ipWhiteBox.clientHeight;
-// ipWhiteBox.animate(
-//     { transform: ['translateY(0)', 'translateY(140px)']},
-//     {
-//         duration: 1,
-//         timeline: ipWhiteBoxTL
-//     }
-// )
-
-// **** Show / Hide text for Execs ****
-
-
+ 
+// MORE/LESS BUTTONS
 
 function showHide(id, lang) {
     let more = "more >";
@@ -82,10 +40,14 @@ function showHide(id, lang) {
 
 }
 
-const carObserver = new IntersectionObserver(entries => {
+// ANIMATION FOR MULTIPLE ITEMS
+
+const animObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
+            entry.target.classList.remove('anim-padding');
             entry.target.classList.add('animate');
+            console.log(entry.target.classList);
         }
         
     })
@@ -154,11 +116,11 @@ const graphObserver = new IntersectionObserver(entries => {
     );
   });
 
-  graphObserver.observe(document.querySelector('.fi-graph'));
-  ipObserver.observe(document.querySelector('#ip-white-box'));
-  eiObserver.observe(document.querySelector('#ei-info'));
-const carousels = document.querySelectorAll('.items-holder');
-carousels.forEach (carousel =>
-                   carObserver.observe(carousel)
+graphObserver.observe(document.querySelector('.fi-graph'));
+// ipObserver.observe(document.querySelector('#ip-white-box'));
+eiObserver.observe(document.querySelector('#ei-info'));
+
+const animations = document.querySelectorAll('.animation-item');
+animations.forEach (animation =>
+                   animObserver.observe(animation)
 );
-// carObserver.observe(document.querySelector('#car-2'));
