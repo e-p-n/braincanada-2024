@@ -474,18 +474,7 @@ header {
     margin-top: 51px;
 }
 
-/* @keyframes ip_slide_down {
-    0% {top: -100px}
-    100% {top: 0;}
-}
 
-
-.infinite-pathways .white-box.animation-item.animate {
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-    transition: 1s;
-    animation-name: ip_slide_down;
-} */
 
 .infinite-pathways .white-box.animation-item {
     position:absolute;
@@ -1495,6 +1484,19 @@ footer .animation-item {
         background-color: white;
         width: 290px;
         height: 140px;
+    }
+
+    @keyframes ip_slide_down {
+        0% {top: -100px}
+        100% {top: 0;}
+    }
+
+
+    .infinite-pathways .white-box.animation-item.animate {
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        transition: 1s;
+        animation-name: ip_slide_down;
     }
 
 
@@ -2827,8 +2829,8 @@ footer .animation-item {
 
     @keyframes fi_slide_down {
         /* 0% {top: -622px} */
-        0% {top: calc(-353px - (var(--graph-unit) * 10) )}
-        100% {top: -353px;}
+        0% {top: calc(-383px - (var(--graph-unit) * 10) )}
+        100% {top: -383px;}
     }
 
     .fi-column.fi-right .animation-item {
@@ -2846,7 +2848,7 @@ footer .animation-item {
     }
 
     .fi-right {
-        margin-top: 353px !important;
+        margin-top: 378px !important;
     }
 
     .fi-graph {
