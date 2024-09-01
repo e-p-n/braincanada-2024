@@ -2315,9 +2315,9 @@ header {
     width: calc(var(--graph-unit)*10);
 }
 .left-legend {
-    margin: 0 35px !important;
+    margin: 0 35px;
 }
-.left-legend-fr {
+.fi-legend-box .fr-mar {
     margin: 0 30px !important;
 }
 .right-legend {
