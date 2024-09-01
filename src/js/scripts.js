@@ -4,31 +4,37 @@
 function showHide(id, lang) {
     let more = "more >";
     let less = "less >";
+    let classSuffix = "";
     if (lang === "fr") {
         more = "Plus >";
         less = "Moins >";
+        classSuffix = "-fr"
     }
     let message = document.getElementById(id);
     
     let button = document.getElementById(id+'-button');
     let pic = document.getElementById(id+'-pic');
     let box = document.getElementById(id+'-box');
-    let boxClass, buttonClass;
+    let boxClass, buttonClass, hiddenClass;
+
     if (id=="ceo") {
         boxClass = "pp-column-extended";
         buttonClass = " pp-padding"
+        hiddenClass = "pp-hidden-ceo" + classSuffix;
     } else {
         boxClass = "pp-column-extended pp-margin"
         buttonClass = "";
+        hiddenClass = "pp-hidden" + classSuffix;
     }
     if (message.className.indexOf("pp-show") == -1) {
-        message.className += " pp-show"
+        message.classList.replace(hiddenClass, "pp-show")
+        console.log(message)
         pic.className += " pp-pic-pos"
         box.className = box.className.replace("pp-column", boxClass);
         button.className += buttonClass
         button.innerHTML = less;
     } else {
-        message.className = message.className.replace(" pp-show", "");
+        message.classList.replace("pp-show", hiddenClass);
         box.className = box.className.replace(boxClass, "pp-column");
         button.className = button.className.replace(buttonClass, "");
         pic.className = pic.className.replace(" pp-pic-pos", "");
@@ -47,7 +53,6 @@ const animObserver = new IntersectionObserver(entries => {
         if(entry.isIntersecting) {
             entry.target.classList.remove('anim-padding');
             entry.target.classList.add('animate');
-            console.log(entry.target.classList);
         }
         
     })
