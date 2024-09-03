@@ -400,11 +400,17 @@ header {
 
 
 @keyframes ib_slide_up {
-    0% {bottom:-120px;}
-     100% {bottom:0px;}
+    0% {bottom:-180px;}
+     100% {bottom:0;}
 }
 
-
+.ib-slide-up {
+    animation-name: ib_slide_up;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    transition: 1s;
+}
 .info-box {
     margin-left: 15px;
     background-color: white;
@@ -414,26 +420,10 @@ header {
     width: 235px;
     height: 121px;
     border-bottom: 2px solid white;
-}
-
-.ib-initial-pos {
     bottom: -200px;
-}
-
-.ib-revised-pos {
-    bottom:0px;
-}
-
-
-
-.ib-slide-up {
-    animation-name: ib_slide_up;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-    transition: 1s;
 
 }
+
 
 
 .info-box:hover {
@@ -1449,7 +1439,24 @@ footer .animation-item {
 
     @keyframes ib_slide_up {
         0% {bottom:-200px;}
-         100% {bottom:0;}
+        20% {bottom:0px;}
+        85% {bottom:0px;}
+        100% {bottom:-180px}
+    }
+
+
+
+    .ib-slide-up {
+        animation-duration: 3s;
+        bottom: -205px;
+
+    }
+
+    .ib-pop-up {
+        bottom: 0px;
+    }
+    .ib-pop-down {
+        bottom: -180px;
     }
 
     .info-box {
@@ -1457,8 +1464,10 @@ footer .animation-item {
         padding: 30px 6px 20px 55px;
         width: 325px;
         height: 150px;
-        bottom: -250px;
+        transition: bottom 1s;
+
     }
+    
     .info-box p, h3 {
         font-size: 18px;
     }
@@ -2724,6 +2733,7 @@ footer .animation-item {
         animation-name: ab_programs_slide_down;
         animation-duration: 2s;
         animation-fill-mode: forwards;
+        animation-delay: 1.5s;
 
     }
     .above-beyond .ab-header .ab-intro {

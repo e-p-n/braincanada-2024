@@ -46,6 +46,39 @@ function showHide(id, lang) {
 
 }
 
+// OUR VISION animations
+function getWidth() {
+    if (self.innerWidth) {
+      return self.innerWidth;
+    }
+  
+    if (document.documentElement && document.documentElement.clientWidth) {
+      return document.documentElement.clientWidth;
+    }
+  
+    if (document.body) {
+      return document.body.clientWidth;
+    }
+  }
+
+function mouseOverSlideUp(event) {
+    let screenWidth = getWidth();
+    if(screenWidth > 871) {
+        infoBox.classList.replace('ib-slide-up', 'ib-pop-up');
+    } 
+
+
+}
+
+function mouseOverSlideDown(event) {
+
+    infoBox.classList.replace('ib-pop-up', 'ib-pop-down');
+
+
+}
+
+
+
 // ANIMATION FOR MULTIPLE ITEMS
 
 const animObserver = new IntersectionObserver(entries => {
@@ -128,3 +161,8 @@ const animations = document.querySelectorAll('.animation-item');
 animations.forEach (animation =>
                    animObserver.observe(animation)
 );
+
+const infoBox = document.getElementById("info-box");
+infoBox.addEventListener("mouseover", mouseOverSlideUp);
+infoBox.addEventListener("mouseleave", mouseOverSlideDown);
+
