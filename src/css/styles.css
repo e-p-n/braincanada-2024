@@ -156,6 +156,7 @@ h5 {
 
 a {
     color: var(--color-1);
+    font-weight: 600;
     
 }
 
@@ -507,7 +508,7 @@ header {
     padding-left: 80px;
 }
 .slider-wrapper .animation-item.animate {
-    animation: moveSlideshow 45s linear infinite;
+    animation: moveSlideshow 60s linear infinite;
     animation-delay: 1s;
 }
 .slider-wrapper .animation-item:hover {
@@ -1035,12 +1036,17 @@ header {
     background-size: 520px;
     background-position: 395px 300px;
     display: flex;
+    flex-direction: column !important;
     justify-content: space-between;
-    flex-direction: column;
     overflow: hidden;
 }
 .financials h3 {
     padding-bottom: 20px;
+}
+
+.fi-header, .fi-body {
+    display: flex;
+    flex-direction: column;
 }
 .fi-graph {
     position: relative;
@@ -1048,8 +1054,9 @@ header {
     width: calc(var(--graph-unit) * 10);
     height: calc(var(--graph-unit) * 10);
     margin: 0 auto;
-
 }
+
+
 @keyframes graph_slide_in {
     0% {left: calc(var(--graph-unit) * -10)}
     100% {left: 0;}
@@ -1465,7 +1472,6 @@ footer .animation-item {
         width: 325px;
         height: 150px;
         transition: bottom 1s;
-
     }
     
     .info-box p, h3 {
@@ -2828,7 +2834,7 @@ footer .animation-item {
     }
 
     .financials h3 {
-        padding-bottom: 50px;
+        margin: 10px 0 25px 0;
     }
 
     .fi-column {
@@ -2838,28 +2844,32 @@ footer .animation-item {
     }
 
     @keyframes fi_slide_down {
-        /* 0% {top: -622px} */
-        0% {top: calc(-383px - (var(--graph-unit) * 10) )}
-        100% {top: -383px;}
+        0% {top: calc(-60px + var(--graph-unit) * -10)}
+        100% {top: -60px;}
     }
 
-    .fi-column.fi-right .animation-item {
+    .fi-column .animation-item {
         position: absolute;
-        top: -622px;
+        top: calc(-60px + var(--graph-unit) * -10);
+        /* top: -500px; */
         width: calc(var(--graph-unit)*10);
         height: calc(var(--graph-unit)*10);
-        background-color: white;    
+        background-color: white;  
     }
 
-    .fi-column.fi-right .animation-item.animate {
+    .fi-column .animation-item.animate {
         animation-name: fi_slide_down;
         animation-duration: 1.5s;
         animation-fill-mode: forwards;
     }
 
-    .fi-right {
-        margin-top: 378px !important;
+    .fi-header, .fi-body {
+        flex-direction: row;
     }
+    .fi-body {
+        margin-top: 50px;
+    }
+
 
     .fi-graph {
         margin: 0;
