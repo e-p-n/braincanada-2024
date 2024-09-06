@@ -86,6 +86,7 @@ const animObserver = new IntersectionObserver(entries => {
         if(entry.isIntersecting) {
             entry.target.classList.remove('anim-padding');
             entry.target.classList.add('animate');
+            console.log(entry.target.classList);
         }
         
     })
@@ -145,8 +146,13 @@ const graphObserver = new IntersectionObserver(entries => {
             if(legends[i].classList.contains("legend-item")){
                 legends[i].classList.add("start-animation");
             }
-        }        
+        }    
+        let headings = graphs.getElementsByTagName("h4");  
+        for (let i= 0; i < headings.length; i++) { 
+            headings[i].classList.add("animate");
+        }
       }
+
     },
     {
         rootMargin: "0 0 -200px 0"

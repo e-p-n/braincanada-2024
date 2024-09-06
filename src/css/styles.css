@@ -183,7 +183,7 @@ p {
 p, li {
     font-family: var(--sans);
     font-weight: 300;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .container {
@@ -544,6 +544,7 @@ header {
     padding-top: 0;
     margin-top: 0;
     display: block;
+    border-bottom: none !important;
 }
 .item h3 {
     font-size: 15px;
@@ -558,6 +559,7 @@ header {
     width: 350px;
     height: 1700px;
     margin-bottom: 57px;
+    margin-top: 20px;
 }
 
 .endless-impacts h3, .perpetual-pride h3, .above-beyond h3, .elev-phil h3, .financials h3 {
@@ -572,6 +574,7 @@ header {
     font-weight: 600;
     margin-top: 8px;
 }
+
 .endless-impacts .ei-content .headline, .endless-impacts .ei-content h3, .endless-impacts .ei-content .date{
     margin-left: 20px 
 }
@@ -611,7 +614,7 @@ header {
     left: 0px;
     width: 130px;
     height: 91px;
-    top: 130px;
+    top: 140px;
     padding: 20px;    
 
 }
@@ -621,13 +624,13 @@ header {
     width: 80px;
     height: 56px;
     position: absolute;
-    top: 75px;
+    top: 85px;
     right: -2px;
 }
 
 .endless-impacts .ei-content .impact-10 {
     background-color: var(--color-6);
-    top: 130px;
+    top: 140px;
     left: 182px;
     width: 130px;
     height: 91px;
@@ -636,7 +639,7 @@ header {
 
 .endless-impacts .ei-content .impact-383 {
     background-color: var(--color-5);
-    top: 272px;
+    top: 282px;
     left: 0px;
     width: 240px;
     height: 91px;
@@ -645,7 +648,7 @@ header {
 
 .endless-impacts .ei-content .impact-2438 {
     background-color: var(--color-9);
-    top: 414px;
+    top: 424px;
     left: 0px;
     width: 312px;
     height: 111px;
@@ -654,7 +657,7 @@ header {
 }
 .endless-impacts .ei-content .impact-183 {
     background-color: var(--color-7);
-    top: 576px;
+    top: 586px;
     left: 0px;
     width: 130px;
     height: 91px;
@@ -662,7 +665,7 @@ header {
 }
 .endless-impacts .ei-content .impact-22, .endless-impacts .ei-content .impact-22-fr {
     background-color: var(--color-1);
-    top: 576px;
+    top: 586px;
     left: 182px;
     width: 130px;
     height: 91px;
@@ -671,7 +674,7 @@ header {
 }
 .endless-impacts .ei-content .impact-66602, .endless-impacts .ei-content .impact-66602-fr {
     background-color: var(--color-2);
-    top: 718px;
+    top: 728px;
     height: 111px;
     right: 0px;
     width: 252px;
@@ -679,7 +682,7 @@ header {
 }
 .endless-impacts .ei-content .impact-34 {
     background-color: var(--color-10);
-    top: 880px;
+    top: 890px;
     left: 0px;
     width: 312px;
     height: 91px;
@@ -688,7 +691,7 @@ header {
 }
 .endless-impacts .ei-content .impact-382 {
     background-color: var(--color-4);
-    top: 1022px;
+    top: 1032px;
     left: 0px;
     width: 242px;
     height: 91px;
@@ -697,7 +700,7 @@ header {
 
 .endless-impacts .ei-content .impact-110 {
     background-color: var(--color-5);
-    top: 1164px;
+    top: 1174px;
     left: 0px;
     width: 110px;
     height: 91px;
@@ -706,7 +709,7 @@ header {
 
 .endless-impacts .ei-content .impact-54, .impact.impact-54-fr  {
     background-color: var(--color-6);
-    top: 1164px;
+    top: 1174px;
     left: 182px;
     width: 130px;
     height: 91px;
@@ -715,7 +718,7 @@ header {
 .endless-impacts .ei-content .impact-86 {
     background-color: var(--color-3);
     color: white;
-    top: 1306px;
+    top: 1316px;
     left: 0px;
     height: 91px;
     width: 312px;
@@ -723,7 +726,7 @@ header {
 }
 .endless-impacts .ei-content .impact-25 {
     background-color: var(--color-2);
-    top: 1448px;
+    top: 1458px;
     left: 182px;
     width: 130px;
     height: 91px;
@@ -732,7 +735,7 @@ header {
 .endless-impacts .ei-content .impact-16 {
     background-color: var(--color-10);
     color: white;
-    top: 1590px;
+    top: 1600px;
     left: 0px;
     width: 312px;
     padding: 20px;
@@ -746,7 +749,7 @@ header {
 
 .perpetual-pride {
     width: 365px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .pp-column-content button {
@@ -784,6 +787,7 @@ header {
 .pp-ceo {
     background-color: var(--color-6);
     padding-bottom: 280px;
+    margin-top: 60px !important;
 }
 
 .pp-hidden, .pp-hidden-fr, .pp-hidden-ceo, .pp-hidden-ceo-fr {
@@ -831,7 +835,7 @@ header {
 
 .ceo-pic {
     position: absolute;
-    bottom: calc(-230px - var(--pic-padding));
+    bottom: calc(-260px - var(--pic-padding));
     width: 190px !important;
     right: -18px;
     border-bottom: white solid var(--pic-padding);
@@ -864,6 +868,8 @@ header {
     margin-left: 20px;
 }
 
+
+
 .pp-column-header {
     width: 100%;
     display: flex;
@@ -891,7 +897,7 @@ header {
 .above-beyond {
     width: 365px;
     background-color: var(--color-13);
-    margin-top: 17px;
+    margin-top: 58px;
     overflow: hidden;
     position: relative;
 }
@@ -1053,8 +1059,9 @@ header {
     overflow: hidden;
     width: calc(var(--graph-unit) * 10);
     height: calc(var(--graph-unit) * 10);
-    margin: 0 auto;
+    margin: 50px auto 0;
 }
+
 
 
 @keyframes graph_slide_in {
@@ -1208,38 +1215,49 @@ header {
 .financials h4 {
     font-family: var(--sans);
     font-weight: 500;
-    text-align: center;
     margin: 20px 0 15px !important;
     padding: 0 !important;
-    /* border: 1px solid green; */
 
 }
+@keyframes graph_title_fade_in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
-.financials ul {
-    list-style-type: square;
+.financials .fi-graph-title-1, .financials .fi-graph-title-2 {
+    opacity: 0;
 }
-.financials li {
-    font-size: 2em;
-    line-height: .6rem;
-    
-    /* border: 1px solid pink; */
+.financials .fi-graph-title-1.animate, .financials .fi-graph-title-2.animate {
+    animation-name: graph_title_fade_in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
+
+.financials .fi-graph-title-2.animate {
+    animation-delay: 4.5s;
+}
+
+.financials .fi-graph-title-1.animate {
+    animation-delay: 1s;
+}
+
+
 .fi-legend-box {
-    width: calc(var(--graph-unit)*10);
-    margin: 0 auto;
+    width: calc(var(--graph-unit)*10.7);
+    margin: 0 30px;
 }
 .fi-legend-box-fr {
-    width: calc(var(--graph-unit)*12); 
+    width: calc(var(--graph-unit)*10.7); 
     margin: 0 auto 0 30px;
 }
 .fi-legend-box-fr h4 {
     width: calc(var(--graph-unit)*10);
 }
 .left-legend {
-    margin: 0 35px;
+    margin: 0;
 }
 .fi-legend-box .fr-mar {
-    margin: 0 30px !important;
+    margin: 0 !important;
 }
 .right-legend {
     margin: 0 !important;
@@ -1250,10 +1268,12 @@ header {
     line-height: 1.2em;
     position: relative; 
     top: -0.5em;
-    left: -.8em;
-    padding-left: 27px;
+    left: -.6em;
+    padding-left: 30px;
     margin-left: 0px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 @keyframes graph_fade_in {
@@ -1291,20 +1311,35 @@ header {
     animation-delay: calc(var(--graph-move) * 16);
 }
 
+.financials ul {
+    list-style-type: square;
+    position: relative;
+}
+.financials li {
+    font-size: 2em;
+    line-height: .6rem;
+    position: relative;
+    left: -13px;
+    top: auto;    
+    /* border: 1px solid pink; */
+}
+
 .legend-no  {
-    display: inline-block;
-    width: 27px;
+    display: block;
+    width: 29px;
     font-weight: 700;
     position: absolute;
-    left: -2px;
+    left: -1px;
 }
 .legend-desc {
-    display: inline-block;
-    width:133px !important;
+    display: block;
+    width:145px !important;
+    padding-top: 0;
+    margin-top: 0;
 }
 .legend-amt, .legend-amt-fr {
-    display: inline-block;
-    width:65px;
+    display: block;
+    width:75px;
     text-align: right;
 }
 .legend-amt-fr {
@@ -1382,14 +1417,16 @@ footer .animation-item {
         line-height: 27px;    
     }
     
-
+    p, li {
+        font-size: 15px;
+    }
 
     header, .title-section, .endless-impacts, .perpetual-pride, .above-beyond, .ab-articles {
         width: 1024px;
         margin: 0 auto;
     }
 
-
+    
 
 
 
@@ -1413,7 +1450,9 @@ footer .animation-item {
     }
 
 
-
+    .language {
+        font-size: 15px;
+    }
 
     /***** INTRO SECTION *****/
 
@@ -2632,6 +2671,7 @@ footer .animation-item {
     
     .pp-ceo, .pp-chair {
         padding: 0;
+        margin-top: 30px!important;
         margin-bottom: 40px;
     }
 
@@ -2718,10 +2758,13 @@ footer .animation-item {
         margin-top: 0;
         width: 453px;
     }
+    .above-beyond .ab-header {
+        position: relative;
+    }
 
     @keyframes ab_programs_slide_down {
         0% {
-            top: -469px;
+            top: -462px;
         }
         100% {
             top: 0px;
@@ -2732,14 +2775,16 @@ footer .animation-item {
         width: 300px;
         padding: 20px 28px 31px 20px !important;    
         position: absolute;
-        top: -469px;
+        top: -460px;
+        /* top: 0px; */
         right: 100px;
+        border-bottom: var(--color-13) 2px solid;
     }
     .ab-header .animation-item.animate {
         animation-name: ab_programs_slide_down;
-        animation-duration: 2s;
+        animation-duration: 2.5s;
         animation-fill-mode: forwards;
-        animation-delay: 1.5s;
+        animation-delay: 0.5;
 
     }
     .above-beyond .ab-header .ab-intro {
@@ -2873,7 +2918,6 @@ footer .animation-item {
 
     .fi-graph {
         margin: 0;
-
     }
     .fi-legend-box {
         margin: 0;
