@@ -749,6 +749,7 @@ header {
 
 .perpetual-pride {
     width: 365px;
+    height: min-content !important;
     margin-top: 40px;
 }
 
@@ -780,9 +781,11 @@ header {
 
 .pp-chair {
     background-color: var(--color-2);
-    margin-bottom: 180px;
     padding-bottom: 80px;
-
+    margin-bottom: 170px !important;
+}
+.added-border {
+    border-bottom: white solid 84px;
 }
 .pp-ceo {
     background-color: var(--color-6);
@@ -868,6 +871,9 @@ header {
     margin-left: 20px;
 }
 
+.pp-column {
+    margin-bottom: 50px;
+}
 
 
 .pp-column-header {
@@ -897,7 +903,7 @@ header {
 .above-beyond {
     width: 365px;
     background-color: var(--color-13);
-    margin-top: 58px;
+    /* margin-top: 58px; */
     overflow: hidden;
     position: relative;
 }
@@ -1215,7 +1221,7 @@ header {
 .financials h4 {
     font-family: var(--sans);
     font-weight: 500;
-    margin: 20px 0 15px !important;
+    margin: 20px 0 15px 20px !important;
     padding: 0 !important;
 
 }
@@ -1262,15 +1268,16 @@ header {
 .right-legend {
     margin: 0 !important;
 }
+.fi-legend-box .left-legend {
+    position: relative;
+}
+
 .legend {
     color: black;
     font-size: .75rem;
     line-height: 1.2em;
-    position: relative; 
-    top: -0.5em;
-    left: -.6em;
-    padding-left: 30px;
-    margin-left: 0px;
+    /* padding-left: 30px; */
+    /* margin-left: 0px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1287,6 +1294,9 @@ header {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-play-state: paused;
+    display: flex;
+
+
 }
 
 .left-legend .color-5 {
@@ -1312,15 +1322,17 @@ header {
 }
 
 .financials ul {
-    list-style-type: square;
+    list-style-type: none;
     position: relative;
+    padding-left: 0;
 }
 .financials li {
     font-size: 2em;
-    line-height: .6rem;
+    line-height: .9rem;
     position: relative;
-    left: -13px;
+    /* left: -13px; */
     top: auto;    
+    margin-bottom: 5px;
     /* border: 1px solid pink; */
 }
 
@@ -1328,9 +1340,36 @@ header {
     display: block;
     width: 29px;
     font-weight: 700;
-    position: absolute;
-    left: -1px;
+    border-left: 14px solid var(--color-13);
+    padding-left: 6px;
+    height: 14px !important;
+    /* position: absolute; */
+    /* left: -1px; */
 }
+
+.color-1 .legend-no {
+    border-color: var(--color-1);
+}
+.color-2 .legend-no {
+    border-color: var(--color-2);
+}
+.color-4 .legend-no {
+    border-color: var(--color-4);
+}
+
+.color-5 .legend-no {
+    border-color: var(--color-5);
+}
+
+.color-6 .legend-no {
+    border-color: var(--color-6);
+}
+
+.color-7 .legend-no {
+    border-color: var(--color-7);
+}
+
+
 .legend-desc {
     display: block;
     width:145px !important;
@@ -1405,6 +1444,12 @@ footer .animation-item {
     top: -1px;
     right: 0;
 }
+
+.health-canada {
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
 
 @media only screen and (min-width:872px) {
     h1 {
@@ -2667,13 +2712,17 @@ footer .animation-item {
 
     .pp-column {
         height: 400px;
+        margin-bottom: 0;
     }
     
     .pp-ceo, .pp-chair {
         padding: 0;
         margin-top: 30px!important;
-        margin-bottom: 40px;
     }
+    .pp-chair {
+        margin-bottom: 0 !important;
+    }
+    
 
     .pp-hidden, .pp-hidden-ceo, .pp-hidden-fr, .pp-hidden-ceo-fr {
         overflow: hidden;
@@ -2701,7 +2750,7 @@ footer .animation-item {
         text-decoration: none;
         color: black;
         font-size: .95em;
-        display: block;
+        display: block !important;
         margin: 30px 0 0 0;
         padding: 0;
         width: fit-content;

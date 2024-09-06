@@ -15,7 +15,8 @@ function showHide(id, lang) {
     let button = document.getElementById(id+'-button');
     let pic = document.getElementById(id+'-pic');
     let box = document.getElementById(id+'-box');
-    let boxClass, buttonClass, hiddenClass;
+    let columnClass = document.querySelector('.pp-'+id);
+    let boxClass, buttonClass, hiddenClass
 
     if (id=="ceo") {
         boxClass = "pp-column-extended";
@@ -28,10 +29,13 @@ function showHide(id, lang) {
     }
     if (message.className.indexOf("pp-show") == -1) {
         message.classList.replace(hiddenClass, "pp-show")
-        console.log(message)
         pic.className += " pp-pic-pos"
         box.className = box.className.replace("pp-column", boxClass);
-        button.className += buttonClass
+        if (id === "chair") {
+            columnClass.classList.add('added-border');
+        }
+        
+        button.className += buttonClass;
         button.innerHTML = less;
     } else {
         message.classList.replace("pp-show", hiddenClass);
@@ -42,6 +46,9 @@ function showHide(id, lang) {
         url = location.href.split('#')[0];
         url += '#' + id + '-box';
         location.href = url;
+        if (id === "chair") {
+            columnClass.classList.remove('added-border');
+        }    
     }
 
 }
@@ -86,7 +93,7 @@ const animObserver = new IntersectionObserver(entries => {
         if(entry.isIntersecting) {
             entry.target.classList.remove('anim-padding');
             entry.target.classList.add('animate');
-            console.log(entry.target.classList);
+            // console.log(entry.target.classList);
         }
         
     })
