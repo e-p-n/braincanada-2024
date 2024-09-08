@@ -942,6 +942,12 @@ header {
 .ab-article-column img {
     width: 100%;
 }
+.ab-names {
+    font-weight: 400;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 
 
 .above-beyond .ab-header .animation-item h4, .above-beyond .ab-header .animation-item h5 {
@@ -2875,11 +2881,6 @@ footer .animation-item {
         padding-right: 100px;
     }
 
-    .ab-names {
-        font-weight: 400;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
 
     .ab-small-margin {
         margin-top: 20px !important; 
